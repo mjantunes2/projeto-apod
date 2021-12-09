@@ -1,9 +1,8 @@
 .body {
-  min-height: 1132px;
   height: 100%;
   font-family: "Roboto", sans-serif;
   background: url("../images/background.jpg") no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
 }
 
