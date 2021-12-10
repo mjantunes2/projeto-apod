@@ -19,8 +19,6 @@ function request(date) {
     url: `https://api.nasa.gov/planetary/apod?api_key=pWykQWkPNxl9ZO9GioA41Sr2dO2HAnDYaVKKiLhq&date=` + $(`#date`).val(),
 
     success: function(result) {
-        console.log(result);
-        console.log("funcionou");
         obj = result;
         title.html(`${obj.title}`);
         title.removeClass("hide");
