@@ -12,21 +12,17 @@ button.on("click", function(event) {
 });
 
 // função com ajax, para fazer a requisição ao site da Nasa, com minha key gerada no API APOD // 
-function request(date) {
-  $(`#date`).val(); // data que o usúario inseriu no input //
-  console.log($(`#data`).val());
+function request() {
   $.ajax({
-    url: `https://api.nasa.gov/planetary/apod?api_key=pWykQWkPNxl9ZO9GioA41Sr2dO2HAnDYaVKKiLhq&date=` + $(`#date`).val(),
+    url: `https://api.nasa.gov/planetary/apod?api_key=pWykQWkPNxl9ZO9GioA41Sr2dO2HAnDYaVKKiLhq&date=` + $(`#date`).val(), // api da nasa mais key com &date= + o valor da data inserida // 
 
     success: function(result) {
-        console.log(result);
-        console.log("funcionou");
         obj = result;
         title.html(`${obj.title}`);
-        title.removeClass("hide");
+        title.removeClass("hide"); // desliga a class hide que esconde o css na página //
         explain.html(`${obj.explanation}`);
-        explain.removeClass("hide");
-        if(obj.media_type != "video") {
+        explain.removeClass("hide"); // desliga a class hide que esconde o css na página // 
+        if(obj.media_type != "video") { // if para inserir imagem ou video // media_type é a informação do qual tipo de mídia estou requisitando do obj //
             content.html (`<img width = "500px" heigth = "500px" id="picture" src="${obj.url}" alt=""></img>`);
             
         } else {
