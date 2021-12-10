@@ -1,9 +1,21 @@
+html {
+  height: 100%;
+}
+
 .body {
   height: 100%;
   font-family: "Roboto", sans-serif;
   background: url("../images/background.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  width: 100%;
+  height: auto;
 }
 
 .title-container {
@@ -92,4 +104,80 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: #f2e8ac60;
   box-shadow: 10px 10px 10px black;
   transition: 0.7s;
+}
+
+.hide {
+  display: none;
+}
+
+#title-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#title {
+  border: 3px solid;
+  border-image: linear-gradient(#f2e7ac, #d9aa52, #bf863f) 1;
+  padding: 5px;
+  background: #3c405973;
+  color: #bf863f;
+  -webkit-text-stroke: 0.1vw #3c4059;
+  box-shadow: 5px 5px 10px black;
+}
+
+#picture-video {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#picture {
+  border: 3px solid;
+  border-image: linear-gradient(#f2e7ac, #d9aa52, #bf863f) 1;
+  padding: 0.5px;
+  box-shadow: 5px 5px 10px black;
+}
+
+#video {
+  border: 3px solid;
+  border-image: linear-gradient(#f2e7ac, #d9aa52, #bf863f) 1;
+  padding: 0.5px;
+  box-shadow: 5px 5px 10px black;
+  width: 1000px;
+  height: 500px;
+}
+
+#explain {
+  margin: 7px;
+  font-size: 30px;
+  border: 3px solid;
+  border-image: linear-gradient(#f2e7ac, #d9aa52, #bf863f) 2;
+  padding: 5px;
+  background: #3c405973;
+  color: #f2e7ac;
+  -webkit-text-stroke: 0.03vw #bf863f;
+  box-shadow: 5px 5px 10px black;
+}
+
+.footer-container {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px;
+  border: 3px solid;
+  border-image: linear-gradient(#f2e7ac, #d9aa52, #bf863f) 1;
+  padding: 5px;
+  background: #3c405973;
+  box-shadow: 5px 5px 10px black;
+}
+
+.footer-text {
+  color: #f2e7ac;
+  -webkit-text-stroke: 0.03vw #3c4059;
 }
